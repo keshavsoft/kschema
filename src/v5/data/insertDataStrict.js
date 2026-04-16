@@ -1,18 +1,21 @@
 /**
- * insertData - Orchestration Flow
+ * insertDataStrict - Strict Orchestration Flow
  *
  * 1. Load config & schema
  * 2. Resolve primary key + file path
- * 3. Read existing data
- * 4. Prepare record (allow extra fields, validate only schema fields)
- * 5. Validate (required + unique only on schema columns)
- * 6. Attach primary key (auto increment)
- * 7. Push + persist to file
- * 8. Return inserted record
+ * 3. Reject manual primary key input
+ * 4. Reject extra fields (only schema fields allowed)
+ * 5. Read existing data
+ * 6. Normalize record (keep only schema fields)
+ * 7. Validate (required + unique on schema columns)
+ * 8. Attach primary key (auto increment)
+ * 9. Push + persist to file
+ * 10. Return inserted record
  *
  * Notes:
- * - Extra fields are NOT validated but are stored
- * - Schema drives validation, not storage
+ * - Only schema-defined fields are allowed
+ * - Any extra field will throw an error
+ * - Primary key is system-generated only
  */
 import { getConfig } from "../../core/configStore.js";
 import { buildDataPath } from "../../utils/pathBuilder.js";
