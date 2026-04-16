@@ -1,11 +1,2 @@
-let _config = null;
-
-export const loadConfig = (config) => {
-    _config = config;
-};
-
-export const getConfig = () => {
-    if (!_config) throw new Error("Config not loaded");
-
-    return _config;
-};
+export * as v1 from "./src/v1/index.js";
+export * as v2 from "./src/v2/index.js";
