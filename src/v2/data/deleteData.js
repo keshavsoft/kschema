@@ -1,6 +1,6 @@
 import fs from "fs";
-import { getConfig } from "../core/configStore.js";
-import { buildDataPath } from "../utils/pathBuilder.js";
+import { getConfig } from "../../core/configStore.js";
+import { buildDataPath } from "../../utils/pathBuilder.js";
 
 export const deleteData = ({ table, key, value }) => {
     const cfg = getConfig();

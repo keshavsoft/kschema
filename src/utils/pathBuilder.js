@@ -1,3 +1,3 @@
 export const buildDataPath = (cfg, fileName) => {
-    return `${cfg.DataPath}/${fileName}`;
+    return `${cfg.DataPath}/${fileName}.json`;
 };

@@ -1,12 +1,10 @@
 {
   "name": "@keshavsoft/kschema",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
-  "main": "index.js",
   "exports": {
-    ".": "./index.js"
-  },
-  "dependencies": {
-    "fs": "^0.0.1-security"
+    ".": "./index.js",
+    "./v1": "./src/v1/index.js",
+    "./v2": "./src/v2/index.js"
   }
 }
