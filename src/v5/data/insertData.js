@@ -23,6 +23,15 @@ import { readData, writeData } from "../helpers/fileHelper.js";
 import { validateRecord } from "../helpers/validateHelper.js";
 import { normalizeRecord } from "../helpers/recordHelper.js";
 
+/**
+ * Inserts a record into the data store
+ *
+ * @param {Object} params
+ * @param {string} params.table - Table name
+ * @param {Object} params.record - Record data to insert
+ *
+ * @returns {Object} Inserted record with primary key
+ */
 export const insertData = ({ table, record }) => {
     const config = getConfig();
     const schema = getSchema(table);
