@@ -2,11 +2,17 @@
   "name": "@keshavsoft/kschema",
   "version": "1.5.1",
   "type": "module",
+  "main": "index.js",
+  "sideEffects": false,
   "exports": {
     ".": "./index.js",
     "./v1": "./src/v1/index.js",
     "./v2": "./src/v2/index.js",
     "./v4": "./src/v4/index.js",
     "./v5": "./src/v5/index.js"
-  }
+  },
+  "files": [
+    "src",
+    "index.js"
+  ]
 }
