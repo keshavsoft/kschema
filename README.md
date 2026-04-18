@@ -1,16 +1,22 @@
-# @keshavsoft/kschema
+# KeshavSoft
+
+Simple tools. Clean architecture. Fast development.
+
+---
+
+## @keshavsoft/kschema
 
 A lightweight schema-driven JSON database for Node.js.
 
 ---
 
-## 🚀 Installation
+## Install
 
-npm install @keshavsoft/kschema
+npm i @keshavsoft/kschema
 
 ---
 
-## 📦 Usage
+## Usage
 
 import { kschema } from "@keshavsoft/kschema";
 
@@ -24,32 +30,34 @@ console.log(data);
 
 ---
 
-## 🔍 Find by Primary Key
+## Features
 
-kschema.table("users").findByPk(1);
-
----
-
-## ✏️ Update
-
-kschema.table("users").update(1, { name: "updated" });
+* File-based JSON storage
+* Schema-driven design
+* Auto primary key
+* Simple CRUD API
+* Zero dependencies
 
 ---
 
-## ❌ Delete
+## Links
 
-kschema.table("users").delete(1);
-
----
-
-## ⚠️ Notes
-
-* Data stored in JSON files
-* Primary key is auto-generated
-* Call `loadConfig` before usage
+GitHub: https://github.com/keshavsoft/kschema
+NPM: https://www.npmjs.com/package/@keshavsoft/kschema
+Website: https://keshavsoft.com
 
 ---
 
-## 👨‍💻 Author
+## Contact
 
-KeshavSoft
+Email: [founder@keshavsoft.com](mailto:founder@keshavsoft.com)
+
+---
+
+## About
+
+KeshavSoft builds simple and practical developer tools focused on clarity, speed, and real-world usage.
+
+## 📄 License
+
+MIT License — see LICENSE file
