@@ -1,6 +1,6 @@
 {
   "name": "@keshavsoft/kschema",
-  "version": "1.6.1",
+  "version": "1.7.1",
   "type": "module",
   "main": "index.js",
   "sideEffects": false,
@@ -10,7 +10,8 @@
     "./v2": "./src/v2/index.js",
     "./v4": "./src/v4/index.js",
     "./v5": "./src/v5/index.js",
-    "./v6": "./src/v6/index.js"
+    "./v6": "./src/v6/index.js",
+    "./v7": "./src/v7/index.js"
   },
   "files": [
     "src",

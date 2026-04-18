@@ -1,71 +1,52 @@
 # @keshavsoft/kschema
 
-A minimal config store for loading and accessing JSON configuration across your application.
+A lightweight schema-driven JSON database for Node.js.
 
 ---
 
 ## 🚀 Installation
 
-```bash
 npm install @keshavsoft/kschema
-```
 
 ---
 
 ## 📦 Usage
 
-```js
-import { loadConfig, getConfig } from "@keshavsoft/kschema";
+import { kschema } from "@keshavsoft/kschema";
 
-loadConfig({ name: "test" });
+kschema.loadConfig({ dataPath: "./data" });
 
-console.log(getConfig());
-```
+kschema.table("users").insert({ name: "keshav" });
 
----
+const data = kschema.table("users").get();
 
-## 🧠 API
-
-### loadConfig(config)
-
-Loads the configuration into memory.
-
-* `config` → Object
+console.log(data);
 
 ---
 
-### getConfig()
+## 🔍 Find by Primary Key
 
-Returns the loaded configuration.
+kschema.table("users").findByPk(1);
 
-* Throws error if config is not loaded
+---
+
+## ✏️ Update
+
+kschema.table("users").update(1, { name: "updated" });
+
+---
+
+## ❌ Delete
+
+kschema.table("users").delete(1);
 
 ---
 
 ## ⚠️ Notes
 
-* Config is stored in-memory
-* Must call `loadConfig` before `getConfig`
-
----
-
-## 📌 Example
-
-```js
-loadConfig({ user: "keshav" });
-
-const data = getConfig();
-
-console.log(data.user); // keshav
-```
-
----
-
-## 🛠 Future Scope
-
-* Validation support
-* Config updates
-* Remote config loading
+* Data stored in JSON files
+* Primary key is auto-generated
+* Call `loadConfig` before usage
 
 ---
 
