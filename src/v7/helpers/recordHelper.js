@@ -7,3 +7,9 @@ export const normalizeRecord = (record, columns) => {
     });
     return clean;
 };
+
+export const applyFilter = (data, filter) => {
+    return data.filter(row =>
+        Object.keys(filter).every(key => row[key] === filter[key])
+    );
+};

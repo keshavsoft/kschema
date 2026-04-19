@@ -1,9 +1,8 @@
-import fs from "fs";
-
 import { getConfig } from "../../core/configStore.js";
 import { buildDataPath } from "../../utils/pathBuilder.js";
 import { getPrimaryKey } from "../helpers/pkHelper.js";
 import { getSchema } from "../config/getSchema.js";
+import { readData } from "../helpers/fileHelper.js";
 
 export const filterByPkData = ({ table, id }) => {
   const cfg = getConfig();
@@ -11,7 +10,7 @@ export const filterByPkData = ({ table, id }) => {
   const pk = getPrimaryKey(schema.columns);
 
   const path = buildDataPath(cfg, table);
-  const data = JSON.parse(fs.readFileSync(path, "utf-8"));
+  const data = readData(path);
 
-  return data.filter(row => row[pk] === parseInt(id)) || [];
+  return data.filter(row => Number(row[pk]) === Number(id));
 };

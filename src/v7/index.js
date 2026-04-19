@@ -6,7 +6,8 @@ import {
     deleteData,
     insertDataStrict,
     findByPkData,
-    filterByPkData
+    filterByPkData,
+    filterByColumnsData
 } from "./data/index.js";
 
 export const kschema = {
@@ -21,5 +22,6 @@ export const kschema = {
         insertStrict: (record) => insertDataStrict({ table, record }),
         findByPk: (id) => findByPkData({ table, id }),
         filterByPk: (id) => filterByPkData({ table, id }),
+        filterByColumns: (filter) => filterByColumnsData({ table, filter }),
     })
 };

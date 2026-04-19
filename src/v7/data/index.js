@@ -8,3 +8,4 @@ export { deleteData } from "./deleteData.js";
 export { findByPkData } from "./findByPk.js";
 export { filterByPkData } from "./filterByPk.js";
 
+export { filterByColumnsData } from "./filterByColumns.js";
