@@ -33,3 +33,7 @@ All notable changes to this project will be documented in this file.
 
 ### filer and find columns perfect
 
+## [1.7.4]
+
+### delete multi added
+

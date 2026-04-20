@@ -22,11 +22,41 @@ import { kschema } from "@keshavsoft/kschema";
 
 kschema.loadConfig({ dataPath: "./data" });
 
-kschema.table("users").insert({ name: "keshav" });
+const users = kschema.table("users");
 
-const data = kschema.table("users").get();
+users.insert({ name: "keshav" });
+
+const data = users.get();
 
 console.log(data);
+
+---
+
+## API
+
+Create
+
+users.insert(record);
+users.insertStrict(record);
+
+Read
+
+users.get();
+users.findByPk(id);
+
+Filter
+
+users.filterByPk(id);
+users.filterByColumns({ name: "keshav" });
+
+Update
+
+users.update(record);
+
+Delete
+
+users.delete(id);
+users.deleteByColumns({ name: "keshav" });
 
 ---
 
@@ -50,7 +80,7 @@ Website: https://keshavsoft.com
 
 ## Contact
 
-Email: [founder@keshavsoft.com](mailto:founder@keshavsoft.com)
+Email: founder@keshavsoft.com
 
 ---
 
@@ -58,6 +88,8 @@ Email: [founder@keshavsoft.com](mailto:founder@keshavsoft.com)
 
 KeshavSoft builds simple and practical developer tools focused on clarity, speed, and real-world usage.
 
-## 📄 License
+---
+
+## License
 
 MIT License — see LICENSE file
