@@ -11,10 +11,11 @@ const deleteData = ({ table, id }) => {
     const pk = getPrimaryKey(getSchema(table).columns);
 
     const data = readData(path);
+    const idAsInt = parseInt(id);
 
-    if (!data.some(item => item[pk] === parseInt(id))) throw new Error(`${pk}: ${id} not found`);
+    if (!data.some(item => item[pk] === idAsInt)) throw new Error(`${pk}: ${id} not found`);
 
-    writeData(path, data.filter(item => item[pk] !== id));
+    writeData(path, data.filter(item => item[pk] !== idAsInt));
 
     return true;
 };
