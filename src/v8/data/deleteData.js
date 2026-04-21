@@ -12,7 +12,7 @@ const deleteData = ({ table, id }) => {
 
     const data = readData(path);
 
-    if (!data.some(item => item[pk] === id)) throw new Error(`${pk}: ${id} not found`);
+    if (!data.some(item => item[pk] === parseInt(id))) throw new Error(`${pk}: ${id} not found`);
 
     writeData(path, data.filter(item => item[pk] !== id));
 
