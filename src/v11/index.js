@@ -1,4 +1,5 @@
 import { loadConfig, getConfig } from "../core/configStore.js";
+
 import * as query from "./engine/query/index.js";
 import * as mutate from "./engine/mutate/index.js";
 
@@ -24,6 +25,8 @@ import buildQuery from "./helpers/buildQuery.js";
  * @typedef {Object} QueryAPI
  * @property {Function} findAll
  * @property {Function} findByPk
+ * @property {(id:any) => any[]} filterByPk
+ * @property {(where:Object) => any[]} filterByColumns
  * @property {AggregateAPI} aggregate
  */
 

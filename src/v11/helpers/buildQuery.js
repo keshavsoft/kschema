@@ -6,12 +6,20 @@ const get = (query, tableName) => () =>
 const findByPk = (query, tableName) => (id) =>
     query.findByPk({ table: tableName, id });
 
+const filterByPk = (query, tableName) => (id) =>
+    query.filterByPk({ table: tableName, id });
+
+const filterByColumns = (query, tableName) => (where) =>
+    query.filterByColumns({ table: tableName, where });
+
 const buildQuery = (query, tableName) => ({
     findAll: get(query, tableName),
     findByPk: findByPk(query, tableName),
+    filterByPk: filterByPk(query, tableName),
+    filterByColumns: filterByColumns(query, tableName),
 
     aggregate: {
-        count: (column) =>
+        count: () =>
             query.aggregate.count({ table: tableName })
     }
 });
