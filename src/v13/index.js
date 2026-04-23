@@ -10,14 +10,21 @@ import { argsSchema } from "./core/getArgs.js";
 import { descSchema } from "./core/getDesc.js";
 import { exampleSchema } from "./core/getExample.js";
 
-
 // ---------- middle ----------
+const built = buildKSchema();
+
+/**
+ * @type {{
+ *  loadConfig: Function,
+ *  getConfig: Function,
+ *  table: typeof built.table
+ * }}
+ */
 const kschema = {
     loadConfig,
     getConfig,
-    ...buildKSchema()
+    table: built.table
 };
-
 
 // ---------- exports ----------
 export {

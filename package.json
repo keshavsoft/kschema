@@ -1,6 +1,6 @@
 {
   "name": "@keshavsoft/kschema",
-  "version": "1.13.2",
+  "version": "1.13.5",
   "type": "module",
   "bin": {
     "kschema": "./src/v12/cli.js"
