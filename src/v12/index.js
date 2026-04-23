@@ -58,3 +58,15 @@ export const kschema = {
         };
     }
 };
+
+export const schemaMeta = {
+    query: {
+        findAll: {
+            args: [],
+            body: `
+const data = table.query.findAll();
+console.log(data);
+`
+        }
+    }
+};
