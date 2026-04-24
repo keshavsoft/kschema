@@ -4,8 +4,9 @@
             "args": [],
             "desc": "Retrieve all rows from the table",
             "example": [
-                "const table = kschema.table('LedgerNames');",
+                "",
                 "const tableData = table.query.findAll();",
+                "",
                 "console.log('Table Data:', tableData);"
             ]
         },
@@ -63,8 +64,9 @@
             ],
             "desc": "Insert record without modification",
             "example": [
-                "const table = kschema.table('LedgerNames');",
-                "table.mutate.insertAsIs({ name: 'Cash' });",
+                "",
+                "table.mutate.insertAsIs({ LedgerName: 'KeshavSoft' });",
+                "",
                 "console.log('Inserted record as-is');"
             ]
         },
