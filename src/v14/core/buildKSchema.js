@@ -23,14 +23,11 @@ import buildQuery from "../helpers/buildQuery.js";
  */
 function table(tableName) {
   return {
-    query: {
-      findAll() {},
-      findByPk() {}
-    },
-    mutate: {
-      insertWithChecks() {}
-    }
+    query: buildQuery(query, tableName),
+    mutate: buildMutate(mutate, tableName)
   };
 }
 
-module.exports = { table };
+export function buildKSchema() {
+  return { table };
+};

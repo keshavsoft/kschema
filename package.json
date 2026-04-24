@@ -1,11 +1,9 @@
 {
   "name": "@keshavsoft/kschema",
-  "version": "1.13.5",
+  "version": "1.16.1",
   "type": "module",
-  "bin": {
-    "kschema": "./src/v12/cli.js"
-  },
   "main": "index.js",
+  "types": "index.d.ts",
   "sideEffects": false,
   "exports": {
     ".": "./index.js",
