@@ -64,10 +64,9 @@
             ],
             "desc": "Insert record without modification",
             "example": [
+                "const insertedRow = table.mutate.insertAsIs({ LedgerName: 'KeshavSoft' });",
                 "",
-                "table.mutate.insertAsIs({ LedgerName: 'KeshavSoft' });",
-                "",
-                "console.log('Inserted record as-is');"
+                "console.log('Inserted record as insertAsIs : ', insertedRow);"
             ]
         },
         "insertFlat": {
@@ -87,9 +86,9 @@
             ],
             "desc": "Insert record with auto-generated primary key",
             "example": [
-                "const table = kschema.table('LedgerNames');",
-                "table.mutate.insertGenPk({ name: 'Sales' });",
-                "console.log('Inserted with generated PK');"
+                "const insertedRow = table.mutate.insertGenPk({ LedgerName: 'KeshavSoft' });",
+                "",
+                "console.log('Inserted record as insertGenPk : ', insertedRow);"
             ]
         },
         "insertWithChecks": {
