@@ -97,9 +97,13 @@
             ],
             "desc": "Insert record with validation checks",
             "example": [
-                "const table = kschema.table('LedgerNames');",
-                "table.mutate.insertWithChecks({ name: 'Purchase' });",
-                "console.log('Inserted with checks');"
+                "try {",
+                "\tconst fromInserted = table.mutate.insertWithChecks({ LedgerName: 'Keshav' });",
+                "",
+                "\tconsole.log('fromInserted : ', fromInserted);",
+                "} catch (err) {",
+                "\tconsole.log(err.message);",
+                "};"
             ]
         },
         "deleteWithChecks": {

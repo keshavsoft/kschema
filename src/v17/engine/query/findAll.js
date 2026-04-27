@@ -1,15 +1,14 @@
-import fs from "fs";
 import { getConfig } from "../../../core/configStore.js";
 import { buildDataPath } from "../../../utils/pathBuilder.js";
+import { readData } from "../../helpers/file/read.js";
 
 const findAll = ({ table }) => {
-  const cfg = getConfig();
+  const config = getConfig();
+  const path = buildDataPath(config, table);
 
-  const path = buildDataPath(cfg, table);
+  const data = readData(path);
 
-  const data = fs.readFileSync(path, "utf-8");
-
-  return JSON.parse(data);
+  return data;
 };
 
 export default findAll;
