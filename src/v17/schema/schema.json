@@ -75,7 +75,6 @@
             ],
             "desc": "Insert flattened record",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "table.mutate.insertFlat({ name: 'Bank' });",
                 "console.log('Inserted flat record');"
             ]
@@ -112,7 +111,6 @@
             ],
             "desc": "Delete record by primary key with validation",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "table.mutate.deleteWithChecks(1);",
                 "console.log('Deleted record with checks');"
             ]
