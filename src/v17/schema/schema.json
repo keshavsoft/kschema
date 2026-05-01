@@ -16,7 +16,6 @@
             ],
             "desc": "Retrieve a single row by primary key",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "const row = table.query.findByPk(1);",
                 "console.log('Row by PK:', row);"
             ]
@@ -27,7 +26,6 @@
             ],
             "desc": "Filter rows matching primary key",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "const rows = table.query.filterByPk(1);",
                 "console.log('Filtered Rows (PK):', rows);"
             ]
@@ -38,7 +36,6 @@
             ],
             "desc": "Filter rows using column conditions",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "const rows = table.query.filterByColumns({ name: 'Cash' });",
                 "console.log('Filtered Rows (Columns):', rows);"
             ]
@@ -50,7 +47,6 @@
                 ],
                 "desc": "Count rows or values of a column",
                 "example": [
-                    "const table = kschema.table('LedgerNames');",
                     "const total = table.query.aggregate.count();",
                     "console.log('Total Rows Count:', total);"
                 ]
@@ -122,7 +118,6 @@
             ],
             "desc": "Update record by primary key with validation",
             "example": [
-                "const table = kschema.table('LedgerNames');",
                 "table.mutate.updateWithChecks(1, { name: 'Updated Ledger' });",
                 "console.log('Updated record with checks');"
             ]
