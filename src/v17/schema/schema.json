@@ -51,6 +51,102 @@
                     "console.log('Total Rows Count:', total);"
                 ]
             }
+        },
+        "getLatestRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const latest = tableData.slice(-1);",
+                "",
+                "console.log('Latest records:', latest);"
+            ]
+        },
+        "getLatestFiveRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const latestFive = tableData.slice(-5);",
+                "",
+                "console.log('Latest 5 records:', latestFive);"
+            ]
+        },
+        "getLatestTenRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const latestTen = tableData.slice(-10);",
+                "",
+                "console.log('Latest 10 records:', latestTen);"
+            ]
+        },
+        "getLatestTwentyRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const latestTwenty = tableData.slice(-20);",
+                "",
+                "console.log('Latest 20 records:', latestTwenty);"
+            ]
+        },
+        "getTopRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                "const topRecords = tableData.slice(0, 1);",
+                "",
+                "console.log('Top records:', topRecords);"
+            ]
+        },
+        "getTopFiveRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const topFive = tableData.slice(0,5);",
+                "",
+                "console.log('Top 10 records:', topFive);"
+            ]
+        },
+        "getTopTenRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const topTen = tableData.slice(0,10);",
+                "",
+                "console.log('Top 10 records:', topTen);"
+            ]
+        },
+        "getTopTwentyRecord": {
+            "args": [],
+            "desc": "Retrieve all rows from the table",
+            "example": [
+                "",
+                "const tableData = table.query.findAll();",
+                "",
+                " const topTwenty = tableData.slice(0,20);",
+                "",
+                "console.log('Top 20 records:', topTwenty);"
+            ]
         }
     },
     "mutate": {
