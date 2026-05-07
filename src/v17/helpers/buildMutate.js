@@ -13,6 +13,9 @@ const insertWithChecks = (mutate, tableName) => (record) =>
 const deleteWithChecks = (mutate, tableName) => (pk) =>
     mutate.deleteWithChecks({ table: tableName, pk });
 
+const deleteWhere = (mutate, tableName) => (where) =>
+    mutate.deleteWhere({ table: tableName, where });
+
 const updateWithChecks = (mutate, tableName) => (pk, record) =>
     mutate.updateWithChecks({ table: tableName, pk, record });
 
@@ -22,6 +25,7 @@ const buildMutate = (mutate, tableName) => ({
     insertGenPk: insertGenPk(mutate, tableName),
     insertWithChecks: insertWithChecks(mutate, tableName),
     deleteWithChecks: deleteWithChecks(mutate, tableName),
+    deleteWhere: deleteWhere(mutate, tableName),
     updateWithChecks: updateWithChecks(mutate, tableName)
 });
 
