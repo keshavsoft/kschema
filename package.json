@@ -1,6 +1,6 @@
 {
   "name": "@keshavsoft/kschema",
-  "version": "1.17.12",
+  "version": "1.18.1",
   "type": "module",
   "main": "index.js",
   "sideEffects": false,
